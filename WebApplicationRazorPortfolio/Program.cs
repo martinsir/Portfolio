@@ -1,4 +1,4 @@
-namespace WebApplicationRazorPortfolio
+namespace Portfolio
 {
     public class Program
     {
