@@ -84,7 +84,7 @@
         <!-- Cirkus Luna -->
         <!-- ========================================================= -->
 
-        <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+        <div class="row gx-0 project-spacing align-items-center">
 
             <div class="col-xl-8 col-lg-7">
 
@@ -96,7 +96,7 @@
 
             <div class="col-xl-4 col-lg-5">
 
-                <div class="featured-text text-center text-lg-start">
+                <div class="featured-text project-accent-left text-center text-lg-start">
 
                     <h4>Cirkus Luna</h4>
 
@@ -137,24 +137,16 @@
         <!-- DSVBooking -->
         <!-- ========================================================= -->
 
-        <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
+        <div class="row gx-0 project-spacing justify-content-center">
 
-            <div class="col-lg-6">
-
-                <!-- Temporary image - replace with DSVBooking screenshot -->
-                <img class="img-fluid"
-                     src="~/assets/img/demo-image-01.jpg"
-                     alt="DSVBooking project" />
-
-            </div>
-
+            <!-- Text -->
             <div class="col-lg-6">
 
                 <div class="bg-black text-center h-100 project">
 
                     <div class="d-flex h-100">
 
-                        <div class="project-text w-100 my-auto text-center text-lg-start">
+                        <div class="project-text project-accent-right w-100 my-auto text-center text-lg-end">
 
                             <h4 class="text-white">
                                 DSVBooking
@@ -164,17 +156,16 @@
                                 A software development project created during my studies
                                 and published as a live web application.
                             </p>
-                            <div class="project-actions d-flex gap-2 justify-content-center justify-content-lg-start">
 
+                            <div class="project-actions d-flex gap-2 justify-content-center justify-content-lg-end">
 
-                                @* Live link *@
                                 <a class="btn btn-outline-light"
                                    href="http://dsvbooking.itloesninger.dk/"
                                    target="_blank"
                                    rel="noopener noreferrer">
                                     Live Project
                                 </a>
-                                @* Github link *@
+
                                 <a class="btn btn-outline-light"
                                    href="https://github.com/martinsir/DSVBooking"
                                    target="_blank"
@@ -183,11 +174,21 @@
                                 </a>
 
                             </div>
+
                         </div>
 
                     </div>
 
                 </div>
+
+            </div>
+
+            <!-- Image -->
+            <div class="col-lg-6">
+
+                <img class="img-fluid"
+                     src="~/assets/img/demo-image-01.jpg"
+                     alt="DSVBooking project" />
 
             </div>
 
@@ -209,33 +210,33 @@
 
             </div>
 
-            <div class="col-lg-6 order-lg-first">
+            <div class="col-lg-6">
 
-                <div class="bg-black text-center h-100 project">
+                <div class="bg-white  text-center h-100 project">
 
                     <div class="d-flex h-100">
 
-                        <div class="project-text w-100 my-auto text-center text-lg-end">
+                        <div class="project-text project-accent-left w-100 my-auto text-center text-lg-start">
 
-                            <h4 class="text-white">
+                            <h4>
                                 Ragnarock
                             </h4>
 
-                            <p class="mb-4 text-white-50">
+                            <p class="mb-4 text-black-50">
                                 A software development project created during my studies
                                 and published as a live web application.
                             </p>
-                            <div class="project-actions d-flex gap-2 justify-content-center justify-content-lg-end">
 
-                                @* Live link *@
-                                <a class="btn btn-outline-light"
+                            <div class="project-actions d-flex gap-2 justify-content-center justify-content-lg-start">
+
+                                <a class="btn btn-outline-dark"
                                    href="http://ragnarock.itloesninger.dk/"
                                    target="_blank"
                                    rel="noopener noreferrer">
                                     Live Project
                                 </a>
-                                @* Github link *@
-                                <a class="btn btn-outline-light"
+
+                                <a class="btn btn-outline-dark"
                                    href="https://github.com/martinsir/Ragnarock"
                                    target="_blank"
                                    rel="noopener noreferrer">
@@ -243,6 +244,7 @@
                                 </a>
 
                             </div>
+
                         </div>
                     </div>
 
@@ -323,25 +325,85 @@
 <!-- GitHub -->
 <section class="github-section bg-black" id="github">
 
-    <div class="container px-4 px-lg-5 text-center">
+    <div class="container px-4 px-lg-5">
 
-        <h2 class="text-white mb-4">
-            GitHub
-        </h2>
+        <div class="github-terminal">
 
-        <p class="text-white-50 mb-4">
-            View my projects, source code and development work on GitHub.
-        </p>
+            <!-- Terminal top bar -->
+            <div class="terminal-header">
 
-        <a class="btn btn-outline-light"
-           href="https://github.com/martinsir"
-           target="_blank"
-           rel="noopener noreferrer">
+                <div class="terminal-dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
 
-            <i class="fab fa-github me-2"></i>
-            Visit GitHub
+                <span class="terminal-title">
+                    martin@portfolio
+                </span>
 
-        </a>
+            </div>
+
+
+            <!-- Terminal content -->
+            <div class="terminal-body">
+
+                <!-- WHOAMI -->
+                <p class="terminal-command">
+                    <span>&gt;</span>
+                    <span class="terminal-type" data-text="whoami"></span>
+                    <span class="terminal-cursor">█</span>
+                </p>
+
+                <div class="terminal-response">
+                    <h2>Martin Hana</h2>
+
+                    <p class="terminal-output">
+                        Computer Science Student
+                    </p>
+                </div>
+
+
+                <!-- STACK -->
+                <p class="terminal-command mt-4">
+                    <span>&gt;</span>
+                    <span class="terminal-type" data-text="stack"></span>
+                    <span class="terminal-cursor">█</span>
+                </p>
+
+                <div class="terminal-response">
+
+                    <p class="terminal-output">
+                        C# · ASP.NET Core · Razor Pages · Web Development
+                    </p>
+
+                </div>
+
+
+                <!-- GITHUB -->
+                <p class="terminal-command mt-4">
+                    <span>&gt;</span>
+                    <span class="terminal-type" data-text="github"></span>
+                    <span class="terminal-cursor">█</span>
+                </p>
+
+                <div class="terminal-response mt-4">
+
+                    <a class="btn btn-outline-light github-terminal-button"
+                       href="https://github.com/martinsir"
+                       target="_blank"
+                       rel="noopener noreferrer">
+
+                        <i class="fab fa-github me-2"></i>
+                        Open GitHub
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
 
     </div>
 

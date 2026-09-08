@@ -265,7 +265,6 @@ body {
 
     .projects-section .featured-text {
         padding: 0 0 0 2rem;
-        border-left: 0.5rem solid var(--portfolio-accent);
     }
 }
 
@@ -283,7 +282,18 @@ body {
         padding: 5rem;
     }
 }
+/* Project accent bars */
 
+@media (min-width: 992px) {
+
+    .project-accent-left {
+        border-left: 0.5rem solid var(--portfolio-accent);
+    }
+
+    .project-accent-right {
+        border-right: 0.5rem solid var(--portfolio-accent);
+    }
+}
 
 /* Project buttons */
 
@@ -296,18 +306,31 @@ body {
         white-space: nowrap;
     }
 
+.project-spacing {
+    margin-bottom: 4rem;
+}
+
+@media (min-width: 992px) {
+    .project-spacing {
+        margin-bottom: 6rem;
+    }
+}
 
 /* =========================================================
    CONTACT
    ========================================================= */
 
 .contact-section {
-    padding-top: 5rem;
+    min-height: 70vh;
+    padding: 9rem 0 3rem;
+    display: flex;
+    align-items: center;
 }
 
     .contact-section .card {
-        border: 0;
-        border-bottom: 0.25rem solid var(--portfolio-accent);
+        transform: perspective(900px) rotateX(0deg) rotateY(0deg);
+        transform-style: preserve-3d;
+        transition: transform 0.15s ease-out, box-shadow 0.3s ease, border-color 0.3s ease;
     }
 
         .contact-section .card h4,
@@ -353,7 +376,10 @@ body {
    ========================================================= */
 
 .github-section {
-    padding: 5rem 0;
+    min-height: 70vh;
+    padding: 6rem 0;
+    display: flex;
+    align-items: center;
 }
 
 
@@ -363,4 +389,409 @@ body {
 
 .footer {
     padding: 5rem 0;
+}
+
+/* =========================================================
+   INTERACTION POLISH
+   ========================================================= */
+
+/* Project buttons */
+.project-actions .btn {
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+    .project-actions .btn:hover {
+        transform: translateY(-2px);
+    }
+
+
+/* Contact cards */
+.contact-section .card {
+    transform: perspective(800px) rotateX(0deg) rotateY(0deg);
+    transform-style: preserve-3d;
+    transform-origin: center center;
+    will-change: transform;
+    backface-visibility: hidden;
+    transition: transform 0.12s ease-out, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+
+/* GitHub / LinkedIn circles */
+.contact-section .social a {
+    transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+}
+
+    .contact-section .social a:hover {
+        transform: translateY(-3px);
+        background-color: rgba(255, 255, 255, 0.15);
+    }
+
+/* =========================================================
+   CONTACT - 3D POLISH
+   ========================================================= */
+
+.contact-section {
+    position: relative;
+    overflow: hidden;
+}
+
+
+    /* Subtle background glow */
+
+    .contact-section::before {
+        content: "";
+        position: absolute;
+        width: 500px;
+        height: 500px;
+        top: 20%;
+        left: 50%;
+        transform: translateX(-50%);
+        background: radial-gradient( circle, rgba(100, 161, 157, 0.14) 0%, rgba(100, 161, 157, 0.05) 35%, transparent 70% );
+        pointer-events: none;
+    }
+
+
+    /* Contact cards */
+
+    .contact-section .card {
+        position: relative;
+        overflow: hidden;
+        background: rgba(255, 255, 255, 0.96);
+        border: 1px solid rgba(100, 161, 157, 0.25);
+        border-bottom: 0.25rem solid var(--portfolio-accent);
+        border-radius: 0.5rem;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25), 0 25px 50px rgba(0, 0, 0, 0.15);
+        transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+
+@media (hover: hover) and (pointer: fine) {
+
+    .contact-section .card:hover {
+        border-color: var(--portfolio-accent);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3), 0 30px 60px rgba(0, 0, 0, 0.2), 0 0 30px rgba(100, 161, 157, 0.2);
+    }
+}
+
+/* Contact icons */
+
+.contact-section .card .text-primary {
+    width: 3rem;
+    height: 3rem;
+    padding: 0.8rem;
+    border-radius: 50%;
+    background: rgba(100, 161, 157, 0.1);
+    box-shadow: 0 0 0 1px rgba(100, 161, 157, 0.3), 0 0 20px rgba(100, 161, 157, 0.2);
+}
+
+
+/* =========================================================
+   SOCIAL ICONS
+   ========================================================= */
+
+.contact-section .social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.25s ease, background-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
+}
+
+
+@media (hover: hover) and (pointer: fine) {
+
+    .contact-section .social a:hover {
+        transform: translateY(-6px) scale(1.08);
+        color: white;
+        background: var(--portfolio-accent);
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35), 0 0 25px rgba(100, 161, 157, 0.35);
+    }
+}
+
+
+/* =========================================================
+   GITHUB SECTION
+   ========================================================= */
+
+.github-section {
+    position: relative;
+    overflow: hidden;
+    border-top: 1px solid rgba(100, 161, 157, 0.2);
+    background: radial-gradient( circle at 50% 50%, rgba(100, 161, 157, 0.12), transparent 45% ), #000;
+}
+
+
+    /* GitHub button */
+
+    .github-section .btn {
+        position: relative;
+        border-color: rgba(255, 255, 255, 0.7);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
+    }
+
+
+@media (hover: hover) and (pointer: fine) {
+
+    .github-section .btn:hover {
+        transform: translateY(-5px) scale(1.03);
+        background: var(--portfolio-accent);
+        border-color: var(--portfolio-accent);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), 0 0 30px rgba(100, 161, 157, 0.35);
+    }
+}
+
+/* =========================================================
+   GITHUB TERMINAL
+   ========================================================= */
+
+.github-section {
+    position: relative;
+    overflow: hidden;
+    padding: 10rem 0;
+    background: radial-gradient( circle at 50% 50%, rgba(100, 161, 157, 0.12), transparent 45% ), #000;
+}
+
+
+    /* Background grid */
+
+    .github-section::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: linear-gradient( rgba(100, 161, 157, 0.05) 1px, transparent 1px ), linear-gradient( 90deg, rgba(100, 161, 157, 0.05) 1px, transparent 1px );
+        background-size: 40px 40px;
+        mask-image: linear-gradient( to bottom, transparent, black 20%, black 80%, transparent );
+        pointer-events: none;
+    }
+
+
+/* Terminal */
+
+.github-terminal {
+    position: relative;
+    max-width: 850px;
+    margin: 0 auto;
+    border: 1px solid rgba(100, 161, 157, 0.35);
+    border-radius: 1rem;
+    overflow: hidden;
+    background: linear-gradient( 145deg, rgba(25, 25, 25, 0.95), rgba(5, 5, 5, 0.98) );
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.6), 0 0 80px rgba(100, 161, 157, 0.12);
+    transform: perspective(1200px) rotateX(0deg) rotateY(0deg);
+    transition: transform 0.15s ease-out, box-shadow 0.35s ease;
+    transform-style: preserve-3d;
+}
+
+
+@media (hover: hover) and (pointer: fine) {
+
+    .github-terminal:hover {
+        box-shadow: 0 50px 100px rgba(0, 0, 0, 0.7), 0 0 100px rgba(100, 161, 157, 0.2);
+    }
+}
+
+
+/* Terminal header */
+
+.terminal-header {
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0 1.25rem;
+    background: rgba(255, 255, 255, 0.04);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+/* Three terminal dots */
+
+.terminal-dots {
+    display: flex;
+    gap: 0.5rem;
+}
+
+    .terminal-dots span {
+        width: 0.75rem;
+        height: 0.75rem;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.25);
+    }
+
+
+/* Terminal title */
+
+.terminal-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255, 255, 255, 0.45);
+    font-size: 0.75rem;
+    letter-spacing: 0.12rem;
+}
+
+
+/* Terminal body */
+
+.terminal-body {
+    padding: 4rem;
+}
+
+
+/* Commands */
+
+.terminal-command {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.7);
+    font-family: Consolas, "Courier New", monospace;
+    letter-spacing: 0.04rem;
+}
+
+    .terminal-command span {
+        color: var(--portfolio-accent);
+        text-shadow: 0 0 12px rgba(100, 161, 157, 0.6);
+    }
+
+
+/* Main terminal heading */
+
+.terminal-body h2 {
+    margin-top: 0.75rem;
+    margin-bottom: 0.25rem;
+    color: white;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    letter-spacing: 0.08rem;
+}
+
+
+/* Terminal result */
+
+.terminal-output {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.55);
+}
+
+
+/* GitHub button */
+
+.github-terminal-button {
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    transition: transform 0.25s ease, background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+
+@media (hover: hover) and (pointer: fine) {
+
+    .github-terminal-button:hover {
+        transform: translateY(-4px) scale(1.03);
+        background: var(--portfolio-accent);
+        border-color: var(--portfolio-accent);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45), 0 0 30px rgba(100, 161, 157, 0.35);
+    }
+}
+
+
+/* Mobile */
+
+@media (max-width: 767.98px) {
+
+    .github-section {
+        padding: 6rem 0;
+    }
+
+    .terminal-body {
+        padding: 2rem;
+    }
+
+    .terminal-title {
+        display: none;
+    }
+}
+
+/* =========================================================
+   CONTACT CARD DEPTH
+   ========================================================= */
+
+.contact-section .card-body {
+    transform-style: preserve-3d;
+}
+
+
+/* Icon sits furthest forward */
+.contact-section .card .text-primary {
+    transform: translateZ(55px);
+}
+
+
+/* Heading sits forward */
+.contact-section .card h4,
+.contact-section .card .h4 {
+    transform: translateZ(35px);
+}
+
+
+/* Divider sits slightly above card */
+.contact-section .card hr {
+    transform: translateZ(25px);
+}
+
+
+/* Contact detail sits forward */
+.contact-section .card .small {
+    transform: translateZ(30px);
+}
+
+/* =========================================================
+   TERMINAL TYPEWRITER
+   ========================================================= */
+
+.terminal-type {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+
+/* Blinking terminal cursor */
+
+.terminal-cursor {
+    color: var(--portfolio-accent);
+    text-shadow: 0 0 10px rgba(100, 161, 157, 0.8);
+    animation: terminalBlink 0.8s steps(1) infinite;
+}
+
+
+@keyframes terminalBlink {
+
+    0%, 50% {
+        opacity: 1;
+    }
+
+    51%, 100% {
+        opacity: 0;
+    }
+}
+
+
+/* Results are hidden until command finishes */
+
+.terminal-response {
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+
+    .terminal-response.show {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+
+/* Hide cursors that are finished */
+
+.terminal-cursor.finished {
+    display: none;
 }
