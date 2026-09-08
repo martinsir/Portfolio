@@ -354,3 +354,127 @@ if (terminal) {
         terminalObserver.observe(terminal);
     }
 }
+// =========================================================
+// Datamatiker study countdown
+// =========================================================
+
+const studyCountdown =
+    document.querySelector('.study-countdown');
+
+if (studyCountdown) {
+
+    const targetDate =
+        new Date(studyCountdown.dataset.target);
+
+
+    const daysElement =
+        studyCountdown.querySelector(
+            '[data-countdown="days"]'
+        );
+
+    const hoursElement =
+        studyCountdown.querySelector(
+            '[data-countdown="hours"]'
+        );
+
+    const minutesElement =
+        studyCountdown.querySelector(
+            '[data-countdown="minutes"]'
+        );
+
+    const secondsElement =
+        studyCountdown.querySelector(
+            '[data-countdown="seconds"]'
+        );
+
+    const statusElement =
+        document.querySelector('.countdown-status');
+
+
+    let countdownTimer;
+
+
+    function updateStudyCountdown() {
+
+        const now = new Date();
+
+        const difference =
+            targetDate.getTime() -
+            now.getTime();
+
+
+        // Study finished
+        if (difference <= 0) {
+
+            daysElement.textContent = '000';
+            hoursElement.textContent = '00';
+            minutesElement.textContent = '00';
+            secondsElement.textContent = '00';
+
+
+            if (statusElement) {
+
+                statusElement.innerHTML = `
+                    STATUS:
+                    <span>COMPLETE ✓</span>
+                    <br>
+                    Martin Hana is officially a Datamatiker.
+                `;
+            }
+
+
+            if (countdownTimer) {
+                clearInterval(countdownTimer);
+            }
+
+            return;
+        }
+
+
+        // Calculate remaining time
+        const totalSeconds =
+            Math.floor(difference / 1000);
+
+        const days =
+            Math.floor(totalSeconds / 86400);
+
+        const hours =
+            Math.floor(
+                (totalSeconds % 86400) / 3600
+            );
+
+        const minutes =
+            Math.floor(
+                (totalSeconds % 3600) / 60
+            );
+
+        const seconds =
+            totalSeconds % 60;
+
+
+        // Display remaining time
+        daysElement.textContent =
+            String(days).padStart(3, '0');
+
+        hoursElement.textContent =
+            String(hours).padStart(2, '0');
+
+        minutesElement.textContent =
+            String(minutes).padStart(2, '0');
+
+        secondsElement.textContent =
+            String(seconds).padStart(2, '0');
+    }
+
+
+    // Show the countdown immediately
+    updateStudyCountdown();
+
+
+    // Then update once every second
+    countdownTimer =
+        setInterval(
+            updateStudyCountdown,
+            1000
+        );
+}
