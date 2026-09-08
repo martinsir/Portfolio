@@ -352,23 +352,7 @@ body {
         margin-top: 5rem;
     }
 
-        .contact-section .social a {
-            text-align: center;
-            height: 3rem;
-            width: 3rem;
-            line-height: 3rem;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 100%;
-            color: rgba(255, 255, 255, 0.3);
-        }
 
-            .contact-section .social a:hover {
-                color: rgba(255, 255, 255, 0.6);
-            }
-
-            .contact-section .social a:active {
-                color: #fff;
-            }
 
 
 /* =========================================================
@@ -416,15 +400,6 @@ body {
 }
 
 
-/* GitHub / LinkedIn circles */
-.contact-section .social a {
-    transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
-}
-
-    .contact-section .social a:hover {
-        transform: translateY(-3px);
-        background-color: rgba(255, 255, 255, 0.15);
-    }
 
 /* =========================================================
    CONTACT - 3D POLISH
@@ -483,33 +458,6 @@ body {
     box-shadow: 0 0 0 1px rgba(100, 161, 157, 0.3), 0 0 20px rgba(100, 161, 157, 0.2);
 }
 
-
-/* =========================================================
-   SOCIAL ICONS
-   ========================================================= */
-
-.contact-section .social a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 3.5rem;
-    height: 3.5rem;
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    transition: transform 0.25s ease, background-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
-}
-
-
-@media (hover: hover) and (pointer: fine) {
-
-    .contact-section .social a:hover {
-        transform: translateY(-6px) scale(1.08);
-        color: white;
-        background: var(--portfolio-accent);
-        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35), 0 0 25px rgba(100, 161, 157, 0.35);
-    }
-}
 
 
 /* =========================================================
@@ -794,4 +742,96 @@ body {
 
 .terminal-cursor.finished {
     display: none;
+}
+
+/* =========================================================
+   CONTACT HEADING
+   ========================================================= */
+
+.contact-heading {
+    max-width: 650px;
+    margin: 0 auto 4rem;
+}
+
+    .contact-heading h2 {
+        font-size: clamp(2rem, 5vw, 3.5rem);
+    }
+
+.contact-eyebrow {
+    margin-bottom: 0.75rem;
+    color: var(--portfolio-accent);
+    font-family: "Varela Round", sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.25rem;
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   CONTACT SOCIAL LINKS
+   ========================================================= */
+
+.contact-social {
+    margin-top: 5rem;
+    flex-wrap: wrap;
+}
+
+
+.contact-section .contact-social-link {
+    display: flex;
+    align-items: center;
+    min-width: 220px;
+    padding: 1rem 1.4rem;
+    color: white;
+    text-decoration: none;
+    background: linear-gradient( 145deg, rgba(255,255,255,0.1), rgba(255,255,255,0.04) );
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 0.75rem;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+
+.contact-social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 3rem;
+    height: 3rem;
+    margin-right: 1rem;
+    border-radius: 50%;
+    color: var(--portfolio-accent);
+    background: rgba(100,161,157,0.1);
+    box-shadow: 0 0 20px rgba(100,161,157,0.15);
+}
+
+
+.contact-section .contact-social-link strong,
+.contact-section .contact-social-link small {
+    display: block;
+}
+
+
+.contact-section .contact-social-link strong {
+    font-size: 0.95rem;
+}
+
+
+.contact-section .contact-social-link small {
+    margin-top: 0.15rem;
+    color: rgba(255,255,255,0.45);
+    font-size: 0.75rem;
+}
+
+
+@media (hover: hover) and (pointer: fine) {
+
+    .contact-section .contact-social-link:hover {
+        color: white;
+        transform: translateY(-6px) scale(1.02);
+        border-color: rgba(100,161,157,0.65);
+        background: linear-gradient( 145deg, rgba(100,161,157,0.16), rgba(255,255,255,0.04) );
+        box-shadow: 0 20px 45px rgba(0,0,0,0.4), 0 0 30px rgba(100,161,157,0.15);
+    }
 }
