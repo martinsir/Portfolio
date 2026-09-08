@@ -142,7 +142,8 @@ Pages
     ├── Hero
     ├── About
     ├── Projects
-    └── Contact
+    ├── Contact
+    └── GitHub
 ```
 
 This keeps the layout reusable for future pages such as:
