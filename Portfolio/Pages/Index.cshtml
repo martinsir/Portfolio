@@ -1,79 +1,258 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Home";
 }
 
-<!-- Masthead-->
+<!-- Masthead -->
 <header class="masthead">
     <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
         <div class="d-flex justify-content-center">
             <div class="text-center">
-                <h1 class="mx-auto my-0 text-uppercase">Martin Hana</h1>
-                <h2 class="text-white-50 mx-auto mt-2 mb-5">A free, responsive, one page Bootstrap theme created by Start Bootstrap.</h2>
-                <a class="btn btn-primary" href="#about">Get Started</a>
+
+                <h1 class="mx-auto my-0 text-uppercase">
+                    Martin Hana
+                </h1>
+
+                <h2 class="text-white-50 mx-auto mt-2 mb-4">
+                    Computer Science Student
+                </h2>
+
+                <p class="text-white-50 mb-5">
+                    C# · ASP.NET Core · Razor Pages · Web Development
+                </p>
+
+                <a class="btn btn-primary" href="#projects">
+                    View Projects
+                </a>
+
             </div>
         </div>
     </div>
 </header>
-<!-- About-->
+<!-- About -->
 <section class="about-section text-center" id="about">
     <div class="container px-4 px-lg-5">
+
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-lg-8">
-                <h2 class="text-white mb-4">Built with Bootstrap 5</h2>
+
+                <h2 class="text-white mb-4">
+                    About Me
+                </h2>
+
                 <p class="text-white-50">
-                    Grayscale is a free Bootstrap theme created by Start Bootstrap. It can be yours right now, simply download the template on
-                    <a href="https://startbootstrap.com/theme/grayscale/">the preview page.</a>
-                    The theme is open source, and you can use it for any purpose, personal or commercial.
+                    I am a Computer Science student focused on software development,
+                    primarily working with C#, ASP.NET Core and web technologies.
                 </p>
+
+                <p class="text-white-50">
+                    This portfolio showcases projects from my education and personal development,
+                    including how they were planned, built, tested and improved.
+                </p>
+
             </div>
         </div>
-        <img class="img-fluid" src="~/assets/img/ipad.png" alt="..." />
+
+        <img class="img-fluid"
+             src="~/assets/img/ipad.png"
+             alt="Software development" />
+
     </div>
 </section>
-<!-- Projects-->
+<!-- Projects -->
 <section class="projects-section bg-light" id="projects">
+
     <div class="container px-4 px-lg-5">
-        <!-- Featured Project Row-->
+
+        <!-- Projects Heading -->
+        <div class="row mb-5">
+            <div class="col-lg-8">
+
+                <h2 class="mb-3">Projects</h2>
+
+                <p class="text-black-50">
+                    Selected projects from my Computer Science education.
+                    Each project is published as a live application on its own subdomain.
+                </p>
+
+            </div>
+        </div>
+
+
+        <!-- ========================================================= -->
+        <!-- Cirkus Luna -->
+        <!-- ========================================================= -->
+
         <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
-            <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="~/assets/img/bg-masthead.jpg" alt="..." /></div>
+
+            <div class="col-xl-8 col-lg-7">
+
+                <!-- Temporary image - replace with Cirkus Luna screenshot -->
+                <img class="img-fluid mb-3 mb-lg-0"
+                     src="~/assets/img/bg-masthead.jpg"
+                     alt="Cirkus Luna project" />
+            </div>
+
             <div class="col-xl-4 col-lg-5">
-                <div class="featured-text text-center text-lg-left">
-                    <h4>Shoreline</h4>
-                    <p class="text-black-50 mb-0">Grayscale is open source and MIT licensed. This means you can use it for any project - even commercial projects! Download it, customize it, and publish your website!</p>
+
+                <div class="featured-text text-center text-lg-start">
+
+                    <h4>Cirkus Luna</h4>
+
+                    <p class="text-black-50 mb-3">
+                        A web-based reservation and booking system developed as part of my
+                        Computer Science education, with functionality for customers,
+                        reservations, shows and administrative data.
+                    </p>
+
+                    <p class="small text-black-50 mb-4">
+                        C# · ASP.NET Core · Razor Pages · JSON · Bootstrap
+                    </p>
+
+                    <div class="project-actions d-flex gap-2 justify-content-center justify-content-lg-start">
+                        @* Live link *@
+                        <a class="btn btn-outline-dark"
+                           href="http://cirkusluna.itloesninger.dk/"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Live Project
+                        </a>
+                        @* Github link *@
+                        <a class="btn btn-outline-dark"
+                           href="https://github.com/martinsir/CirkusLuna"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            GitHub
+                        </a>
+                    </div>
                 </div>
+
             </div>
+
         </div>
-        <!-- Project One Row-->
+
+
+        <!-- ========================================================= -->
+        <!-- DSVBooking -->
+        <!-- ========================================================= -->
+
         <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
-            <div class="col-lg-6"><img class="img-fluid" src="~/assets/img/demo-image-01.jpg" alt="..." /></div>
+
             <div class="col-lg-6">
-                <div class="bg-black text-center h-100 project">
-                    <div class="d-flex h-100">
-                        <div class="project-text w-100 my-auto text-center text-lg-left">
-                            <h4 class="text-white">Misty</h4>
-                            <p class="mb-0 text-white-50">An example of where you can put an image of a project, or anything else, along with a description.</p>
-                        </div>
-                    </div>
-                </div>
+
+                <!-- Temporary image - replace with DSVBooking screenshot -->
+                <img class="img-fluid"
+                     src="~/assets/img/demo-image-01.jpg"
+                     alt="DSVBooking project" />
+
             </div>
+
+            <div class="col-lg-6">
+
+                <div class="bg-black text-center h-100 project">
+
+                    <div class="d-flex h-100">
+
+                        <div class="project-text w-100 my-auto text-center text-lg-start">
+
+                            <h4 class="text-white">
+                                DSVBooking
+                            </h4>
+
+                            <p class="mb-4 text-white-50">
+                                A software development project created during my studies
+                                and published as a live web application.
+                            </p>
+                            <div class="project-actions d-flex gap-2 justify-content-center justify-content-lg-start">
+
+
+                                @* Live link *@
+                                <a class="btn btn-outline-light"
+                                   href="http://dsvbooking.itloesninger.dk/"
+                                   target="_blank"
+                                   rel="noopener noreferrer">
+                                    Live Project
+                                </a>
+                                @* Github link *@
+                                <a class="btn btn-outline-light"
+                                   href="https://github.com/martinsir/DSVBooking"
+                                   target="_blank"
+                                   rel="noopener noreferrer">
+                                    GitHub
+                                </a>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
-        <!-- Project Two Row-->
+
+
+        <!-- ========================================================= -->
+        <!-- Ragnarock -->
+        <!-- ========================================================= -->
+
         <div class="row gx-0 justify-content-center">
-            <div class="col-lg-6"><img class="img-fluid" src="~/assets/img/demo-image-02.jpg" alt="..." /></div>
+
+            <div class="col-lg-6">
+
+                <!-- Temporary image - replace with Ragnarock screenshot -->
+                <img class="img-fluid"
+                     src="~/assets/img/demo-image-02.jpg"
+                     alt="Ragnarock project" />
+
+            </div>
+
             <div class="col-lg-6 order-lg-first">
+
                 <div class="bg-black text-center h-100 project">
+
                     <div class="d-flex h-100">
-                        <div class="project-text w-100 my-auto text-center text-lg-right">
-                            <h4 class="text-white">Mountains</h4>
-                            <p class="mb-0 text-white-50">Another example of a project with its respective description. These sections work well responsively as well!</p>
+
+                        <div class="project-text w-100 my-auto text-center text-lg-end">
+
+                            <h4 class="text-white">
+                                Ragnarock
+                            </h4>
+
+                            <p class="mb-4 text-white-50">
+                                A software development project created during my studies
+                                and published as a live web application.
+                            </p>
+                            <div class="project-actions d-flex gap-2 justify-content-center justify-content-lg-end">
+
+                                @* Live link *@
+                                <a class="btn btn-outline-light"
+                                   href="http://ragnarock.itloesninger.dk/"
+                                   target="_blank"
+                                   rel="noopener noreferrer">
+                                    Live Project
+                                </a>
+                                @* Github link *@
+                                <a class="btn btn-outline-light"
+                                   href="https://github.com/martinsir/Ragnarock"
+                                   target="_blank"
+                                   rel="noopener noreferrer">
+                                    GitHub
+                                </a>
+
+                            </div>
                         </div>
                     </div>
+
                 </div>
             </div>
+
         </div>
+
     </div>
+
 </section>
 
 <!-- Contact-->
@@ -96,7 +275,11 @@
                         <i class="fas fa-envelope text-primary mb-2"></i>
                         <h4 class="text-uppercase m-0">Email</h4>
                         <hr class="my-4 mx-auto" />
-                        <div class="small text-black-50"><a href="#!">martin.hana88@gmail.com/</a></div>
+                        <div class="small text-black-50">
+                            <a href="mailto:martin.hana88@gmail.com">
+                                martin.hana88@gmail.com
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -112,9 +295,27 @@
             </div>
         </div>
         <div class="social d-flex justify-content-center">
-            <a class="mx-2" href="#!"><i class="fab fa-twitter"></i></a>
-            <a class="mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
-            <a class="mx-2" href="#!"><i class="fab fa-github"></i></a>
+
+            <!-- GitHub -->
+            <a class="mx-2"
+               href="https://github.com/martinsir"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="GitHub">
+
+                <i class="fab fa-github"></i>
+            </a>
+
+            <!-- LinkedIn -->
+            <a class="mx-2"
+               href="https://www.linkedin.com/in/martin-hana/"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="LinkedIn">
+
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+
         </div>
     </div>
 </section>
