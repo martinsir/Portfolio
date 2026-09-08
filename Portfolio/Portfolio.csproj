@@ -9,10 +9,22 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<Folder Include="Models\" />
-		<Folder Include="Services\" />
-		<Folder Include="wwwroot\images\branding\" />
-		<Folder Include="wwwroot\images\projects\dsvbooking\" />
+	  <Compile Remove="Models\**" />
+	  <Compile Remove="Services\**" />
+	  <Compile Remove="wwwroot\images\branding\**" />
+	  <Compile Remove="wwwroot\images\projects\dsvbooking\**" />
+	  <Content Remove="Models\**" />
+	  <Content Remove="Services\**" />
+	  <Content Remove="wwwroot\images\branding\**" />
+	  <Content Remove="wwwroot\images\projects\dsvbooking\**" />
+	  <EmbeddedResource Remove="Models\**" />
+	  <EmbeddedResource Remove="Services\**" />
+	  <EmbeddedResource Remove="wwwroot\images\branding\**" />
+	  <EmbeddedResource Remove="wwwroot\images\projects\dsvbooking\**" />
+	  <None Remove="Models\**" />
+	  <None Remove="Services\**" />
+	  <None Remove="wwwroot\images\branding\**" />
+	  <None Remove="wwwroot\images\projects\dsvbooking\**" />
 	</ItemGroup>
 
 </Project>
