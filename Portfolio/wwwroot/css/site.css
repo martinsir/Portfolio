@@ -4,7 +4,6 @@
    Bootstrap itself is loaded separately in _Layout.cshtml
    ========================================================= */
 
-
 /* =========================================================
    GLOBAL
    ========================================================= */
@@ -31,7 +30,6 @@ body {
     font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     letter-spacing: 0.0625em;
 }
-
 
 /* =========================================================
    NAVIGATION
@@ -71,7 +69,6 @@ body {
     }
 
 @media (min-width: 992px) {
-
     #mainNav {
         padding-top: 0;
         padding-bottom: 0;
@@ -128,7 +125,6 @@ body {
                 }
 }
 
-
 /* =========================================================
    BUTTONS
    ========================================================= */
@@ -164,7 +160,6 @@ body {
     --bs-btn-disabled-bg: #64a19d;
     --bs-btn-disabled-border-color: #64a19d;
 }
-
 
 /* =========================================================
    MASTHEAD / HERO
@@ -202,7 +197,6 @@ body {
     }
 
 @media (min-width: 768px) {
-
     .masthead h1,
     .masthead .h1 {
         font-size: 4rem;
@@ -211,7 +205,6 @@ body {
 }
 
 @media (min-width: 992px) {
-
     .masthead {
         height: 100vh;
         padding: 0;
@@ -231,7 +224,6 @@ body {
         }
 }
 
-
 /* =========================================================
    ABOUT
    ========================================================= */
@@ -245,7 +237,6 @@ body {
         margin-bottom: 5rem;
     }
 
-
 /* =========================================================
    PROJECTS
    ========================================================= */
@@ -254,7 +245,6 @@ body {
     padding: 10rem 0;
 }
 
-
     /* Featured project - Cirkus Luna */
 
     .projects-section .featured-text {
@@ -262,12 +252,10 @@ body {
     }
 
 @media (min-width: 992px) {
-
     .projects-section .featured-text {
         padding: 0 0 0 2rem;
     }
 }
-
 
 /* Standard project panels */
 
@@ -277,7 +265,6 @@ body {
 }
 
 @media (min-width: 992px) {
-
     .projects-section .project-text {
         padding: 5rem;
     }
@@ -285,7 +272,6 @@ body {
 /* Project accent bars */
 
 @media (min-width: 992px) {
-
     .project-accent-left {
         border-left: 0.5rem solid var(--portfolio-accent);
     }
@@ -352,9 +338,6 @@ body {
         margin-top: 5rem;
     }
 
-
-
-
 /* =========================================================
    GITHUB
    ========================================================= */
@@ -366,12 +349,13 @@ body {
     align-items: center;
 }
 
-
 /* =========================================================
    FOOTER
    ========================================================= */
 
 .footer {
+    /*    Razorpages is conflicting with the customlayout so this is to bypass the standard layout*/
+    position: static !important;
     padding: 5rem 0;
 }
 
@@ -388,7 +372,6 @@ body {
         transform: translateY(-2px);
     }
 
-
 /* Contact cards */
 .contact-section .card {
     transform: perspective(800px) rotateX(0deg) rotateY(0deg);
@@ -399,8 +382,6 @@ body {
     transition: transform 0.12s ease-out, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
-
-
 /* =========================================================
    CONTACT - 3D POLISH
    ========================================================= */
@@ -409,7 +390,6 @@ body {
     position: relative;
     overflow: hidden;
 }
-
 
     /* Subtle background glow */
 
@@ -425,7 +405,6 @@ body {
         pointer-events: none;
     }
 
-
     /* Contact cards */
 
     .contact-section .card {
@@ -440,7 +419,6 @@ body {
     }
 
 @media (hover: hover) and (pointer: fine) {
-
     .contact-section .card:hover {
         border-color: var(--portfolio-accent);
         box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3), 0 30px 60px rgba(0, 0, 0, 0.2), 0 0 30px rgba(100, 161, 157, 0.2);
@@ -458,8 +436,6 @@ body {
     box-shadow: 0 0 0 1px rgba(100, 161, 157, 0.3), 0 0 20px rgba(100, 161, 157, 0.2);
 }
 
-
-
 /* =========================================================
    GITHUB SECTION
    ========================================================= */
@@ -471,7 +447,6 @@ body {
     background: radial-gradient( circle at 50% 50%, rgba(100, 161, 157, 0.12), transparent 45% ), #000;
 }
 
-
     /* GitHub button */
 
     .github-section .btn {
@@ -481,9 +456,7 @@ body {
         transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
     }
 
-
 @media (hover: hover) and (pointer: fine) {
-
     .github-section .btn:hover {
         transform: translateY(-5px) scale(1.03);
         background: var(--portfolio-accent);
@@ -503,7 +476,6 @@ body {
     background: radial-gradient( circle at 50% 50%, rgba(100, 161, 157, 0.12), transparent 45% ), #000;
 }
 
-
     /* Background grid */
 
     .github-section::before {
@@ -515,7 +487,6 @@ body {
         mask-image: linear-gradient( to bottom, transparent, black 20%, black 80%, transparent );
         pointer-events: none;
     }
-
 
 /* Terminal */
 
@@ -533,14 +504,11 @@ body {
     transform-style: preserve-3d;
 }
 
-
 @media (hover: hover) and (pointer: fine) {
-
     .github-terminal:hover {
         box-shadow: 0 50px 100px rgba(0, 0, 0, 0.7), 0 0 100px rgba(100, 161, 157, 0.2);
     }
 }
-
 
 /* Terminal header */
 
@@ -553,7 +521,6 @@ body {
     background: rgba(255, 255, 255, 0.04);
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
-
 
 /* Three terminal dots */
 
@@ -569,7 +536,6 @@ body {
         background: rgba(255, 255, 255, 0.25);
     }
 
-
 /* Terminal title */
 
 .terminal-title {
@@ -581,13 +547,11 @@ body {
     letter-spacing: 0.12rem;
 }
 
-
 /* Terminal body */
 
 .terminal-body {
     padding: 4rem;
 }
-
 
 /* Commands */
 
@@ -603,7 +567,6 @@ body {
         text-shadow: 0 0 12px rgba(100, 161, 157, 0.6);
     }
 
-
 /* Main terminal heading */
 
 .terminal-body h2 {
@@ -614,14 +577,12 @@ body {
     letter-spacing: 0.08rem;
 }
 
-
 /* Terminal result */
 
 .terminal-output {
     margin: 0;
     color: rgba(255, 255, 255, 0.55);
 }
-
 
 /* GitHub button */
 
@@ -631,9 +592,7 @@ body {
     transition: transform 0.25s ease, background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
-
 @media (hover: hover) and (pointer: fine) {
-
     .github-terminal-button:hover {
         transform: translateY(-4px) scale(1.03);
         background: var(--portfolio-accent);
@@ -642,11 +601,9 @@ body {
     }
 }
 
-
 /* Mobile */
 
 @media (max-width: 767.98px) {
-
     .github-section {
         padding: 6rem 0;
     }
@@ -668,12 +625,10 @@ body {
     transform-style: preserve-3d;
 }
 
-
 /* Icon sits furthest forward */
 .contact-section .card .text-primary {
     transform: translateZ(55px);
 }
-
 
 /* Heading sits forward */
 .contact-section .card h4,
@@ -681,12 +636,10 @@ body {
     transform: translateZ(35px);
 }
 
-
 /* Divider sits slightly above card */
 .contact-section .card hr {
     transform: translateZ(25px);
 }
-
 
 /* Contact detail sits forward */
 .contact-section .card .small {
@@ -701,7 +654,6 @@ body {
     color: rgba(255, 255, 255, 0.8);
 }
 
-
 /* Blinking terminal cursor */
 
 .terminal-cursor {
@@ -710,9 +662,7 @@ body {
     animation: terminalBlink 0.8s steps(1) infinite;
 }
 
-
 @keyframes terminalBlink {
-
     0%, 50% {
         opacity: 1;
     }
@@ -722,7 +672,6 @@ body {
     }
 }
 
-
 /* Results are hidden until command finishes */
 
 .terminal-response {
@@ -731,12 +680,10 @@ body {
     transition: opacity 0.35s ease, transform 0.35s ease;
 }
 
-
     .terminal-response.show {
         opacity: 1;
         transform: translateY(0);
     }
-
 
 /* Hide cursors that are finished */
 
@@ -753,7 +700,6 @@ body {
     margin-bottom: 1.5rem;
 }
 
-
 .study-countdown {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -761,7 +707,6 @@ body {
     margin-top: 1rem;
     margin-bottom: 1.25rem;
 }
-
 
 .countdown-unit {
     padding: 1rem 0.75rem;
@@ -771,7 +716,6 @@ body {
     border-radius: 0.5rem;
     box-shadow: inset 0 0 20px rgba(100, 161, 157, 0.025);
 }
-
 
 .countdown-number {
     display: block;
@@ -783,7 +727,6 @@ body {
     text-shadow: 0 0 15px rgba(100, 161, 157, 0.4);
 }
 
-
 .countdown-name {
     display: block;
     margin-top: 0.35rem;
@@ -794,7 +737,6 @@ body {
     letter-spacing: 0.1rem;
 }
 
-
 .countdown-status {
     margin: 0;
     color: rgba(255, 255, 255, 0.45);
@@ -802,22 +744,18 @@ body {
     font-size: 0.8rem;
 }
 
-
     .countdown-status span {
         color: var(--portfolio-accent);
         text-shadow: 0 0 10px rgba(100, 161, 157, 0.5);
     }
 
-
 /* Mobile */
 
 @media (max-width: 767.98px) {
-
     .study-countdown {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
-
 
 /* =========================================================
    CONTACT HEADING
@@ -841,7 +779,6 @@ body {
     text-transform: uppercase;
 }
 
-
 /* =========================================================
    CONTACT SOCIAL LINKS
    ========================================================= */
@@ -850,7 +787,6 @@ body {
     margin-top: 5rem;
     flex-wrap: wrap;
 }
-
 
 .contact-section .contact-social-link {
     display: flex;
@@ -866,7 +802,6 @@ body {
     transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
 }
 
-
 .contact-social-icon {
     display: flex;
     align-items: center;
@@ -881,17 +816,14 @@ body {
     box-shadow: 0 0 20px rgba(100,161,157,0.15);
 }
 
-
 .contact-section .contact-social-link strong,
 .contact-section .contact-social-link small {
     display: block;
 }
 
-
 .contact-section .contact-social-link strong {
     font-size: 0.95rem;
 }
-
 
 .contact-section .contact-social-link small {
     margin-top: 0.15rem;
@@ -899,9 +831,7 @@ body {
     font-size: 0.75rem;
 }
 
-
 @media (hover: hover) and (pointer: fine) {
-
     .contact-section .contact-social-link:hover {
         color: white;
         transform: translateY(-6px) scale(1.02);
