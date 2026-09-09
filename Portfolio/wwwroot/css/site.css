@@ -354,8 +354,6 @@ body {
    ========================================================= */
 
 .footer {
-    /*    Razorpages is conflicting with the customlayout so this is to bypass the standard layout*/
-    position: static !important;
     padding: 5rem 0;
 }
 
